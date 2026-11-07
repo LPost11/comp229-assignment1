@@ -1,0 +1,57 @@
+<%# File Name: about.ejs %>
+<%# Student's Name: WangZhenghao %>
+<%# StudentID: 2024110451 %>
+<%# Date: 2026-11-05 %>
+<%# Description: %>
+<%# View template - About Me Page. Shows legal name, a profile %>
+<%# photo, a short bio and a link to a downloadable PDF resume. %>
+<%- include('partials/header', { title: title, page: page }); %>
+
+  <%# Section: Page Title %>
+  <section class="page-title text-center text-white">
+    <div class="container py-5">
+      <h1 class="fw-bold">About Me</h1>
+      <p class="mb-0">A little bit about who I am</p>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row align-items-center g-5">
+      <%# Column: Profile photo (placeholder - replace profile.jpg in /public/images) %>
+      <div class="col-md-4 text-center">
+        <img src="/images/profile.svg" alt="Photo of WangZhenghao"
+          class="profile-photo shadow rounded-circle">
+      </div>
+
+      <%# Column: Bio, education and resume link %>
+      <div class="col-md-8">
+        <h2 class="fw-bold">WangZhenghao</h2>
+        <p class="text-muted mb-4">Web Developer &amp; Student</p>
+
+        <p>
+          Hello! My name is <strong>WangZhenghao</strong>, a web development student who enjoys
+          building things for the internet. I work mainly with JavaScript, Node.js and Express,
+          and I care about writing clean, well-structured code.
+        </p>
+        <p>
+          I am currently studying <strong>Web Application Development (COMP229)</strong>, where I
+          practise full-stack development with the MEAN stack. Outside of class, I like exploring
+          new frameworks, contributing small tools to open source, and playing badminton.
+        </p>
+
+        <%# Education snapshot %>
+        <ul class="list-unstyled edu-list mt-4">
+          <li><i class="bi bi-mortarboard me-2 text-accent"></i>Undergraduate student, Computer Science</li>
+          <li><i class="bi bi-translate me-2 text-accent"></i>Languages: Chinese (native), English (fluent)</li>
+          <li><i class="bi bi-heart me-2 text-accent"></i>Interests: web dev, badminton, photography</li>
+        </ul>
+
+        <%# Link to PDF version of the resume (assignment requirement) %>
+        <a href="/resume/WangZhenghao_Resume.pdf" class="btn btn-accent mt-3" target="_blank" rel="noopener">
+          <i class="bi bi-file-earmark-pdf me-1"></i> Download My Resume (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+<%- include('partials/footer'); %>

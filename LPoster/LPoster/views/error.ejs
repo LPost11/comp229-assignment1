@@ -1,0 +1,18 @@
+<%# File Name: error.ejs %>
+<%# Student's Name: WangZhenghao %>
+<%# StudentID: 2024110451 %>
+<%# Date: 2026-11-05 %>
+<%# Description: %>
+<%# View template - Error page. Rendered when a request fails %>
+<%# or a route does not exist (404 / 500). %>
+<%- include('partials/header', { title: 'Error | LPoster', page: 'error' }); %>
+
+  <%# Section: Error message %>
+  <section class="container py-5 text-center">
+    <h1 class="display-5 fw-bold text-accent"><%= error.status || 500 %></h1>
+    <h2 class="h4 mt-3">Oops, something went wrong</h2>
+    <p class="text-muted"><%= message %></p>
+    <a href="/" class="btn btn-accent mt-2">Back to Home</a>
+  </section>
+
+<%- include('partials/footer'); %>

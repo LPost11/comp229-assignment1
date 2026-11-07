@@ -1,0 +1,87 @@
+<%# File Name: services.ejs %>
+<%# Student's Name: WangZhenghao %>
+<%# StudentID: 2024110451 %>
+<%# Date: 2026-11-05 %>
+<%# Description: %>
+<%# View template - Services Page. Short list of services %>
+<%# offered, each with an icon and description. %>
+<%- include('partials/header', { title: title, page: page }); %>
+
+  <%# Section: Page Title %>
+  <section class="page-title text-center text-white">
+    <div class="container py-5">
+      <h1 class="fw-bold">Services</h1>
+      <p class="mb-0">What I can do for you</p>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row g-4">
+
+      <%# Service 1: General Programming %>
+      <div class="col-md-6 col-lg-3">
+        <div class="card service-card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-terminal service-icon"></i>
+            <h2 class="h5 mt-3">General Programming</h2>
+            <p class="mb-0">
+              Small utilities, scripts and console applications in Java, Python or C#,
+              delivered with clean code and documentation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <%# Service 2: Web Development %>
+      <div class="col-md-6 col-lg-3">
+        <div class="card service-card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-globe2 service-icon"></i>
+            <h2 class="h5 mt-3">Web Development</h2>
+            <p class="mb-0">
+              Full-stack websites and web apps using Node.js, Express and EJS,
+              from static pages to database-driven applications.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <%# Service 3: UI Implementation %>
+      <div class="col-md-6 col-lg-3">
+        <div class="card service-card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-palette service-icon"></i>
+            <h2 class="h5 mt-3">UI Implementation</h2>
+            <p class="mb-0">
+              Converting designs into responsive, mobile-friendly interfaces
+              with HTML, CSS, Bootstrap and JavaScript.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <%# Service 4: Mobile Apps %>
+      <div class="col-md-6 col-lg-3">
+        <div class="card service-card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-phone service-icon"></i>
+            <h2 class="h5 mt-3">Mobile Apps</h2>
+            <p class="mb-0">
+              Simple cross-platform mobile applications and mobile-first
+              web experiences for small projects and demos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <%# Call-to-action strip: guide the visitor to the Contact page %>
+    <div class="cta-strip text-center text-white rounded mt-5 p-4">
+      <h2 class="h4 mb-2">Need something built?</h2>
+      <p class="mb-3">Tell me about your idea and let's make it happen.</p>
+      <a href="/contact" class="btn btn-accent">Contact Me <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </section>
+
+<%- include('partials/footer'); %>

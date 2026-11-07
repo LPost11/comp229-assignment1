@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <!-- Placeholder image for Project 3: Weather Dashboard -->
+  <rect width="600" height="360" fill="#1f2430"/>
+  <polyline points="60,260 160,200 260,230 360,150 460,180 540,110" fill="none"
+    stroke="#00d2a8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="480" cy="100" r="34" fill="#ffd166"/>
+  <rect x="60" y="290" width="480" height="14" rx="7" fill="#ffffff" opacity="0.25"/>
+  <text x="300" y="340" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold"
+    fill="#ffffff" text-anchor="middle">Weather Dashboard - Forecast Charts</text>
+</svg>

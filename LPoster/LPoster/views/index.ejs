@@ -1,0 +1,68 @@
+<%# File Name: index.ejs %>
+<%# Student's Name: WangZhenghao %>
+<%# StudentID: 2024110451 %>
+<%# Date: 2026-11-05 %>
+<%# Description: %>
+<%# View template - Home Page. Includes a welcome message, %>
+<%# mission statement and call-to-action buttons that redirect %>
+<%# to the About Me and Projects pages. %>
+<%- include('partials/header', { title: title, page: page }); %>
+
+  <%# Section: Hero Banner - welcome message and mission statement %>
+  <section class="hero d-flex align-items-center text-center text-white">
+    <div class="container py-5">
+      <h1 class="hero-title display-4 fw-bold">Welcome to <span class="brand-accent">LPoster</span></h1>
+      <p class="hero-subtitle lead mt-3">
+        Hi, I'm <strong>WangZhenghao</strong> &mdash; a passionate web developer crafting
+        clean, modern and user-friendly applications with Node.js and Express.
+      </p>
+      <div class="mission-statement mx-auto mt-4 p-4 rounded">
+        <h2 class="h5 text-uppercase letter-spacing">My Mission</h2>
+        <p class="mb-0">
+          To build software that is simple, reliable and delightful to use &mdash;
+          turning ideas into working products through thoughtful engineering and continuous learning.
+        </p>
+      </div>
+
+      <%# Call-to-action buttons: redirect to About Me / Projects pages %>
+      <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+        <a href="/about" class="btn btn-accent btn-lg">About Me <i class="bi bi-person"></i></a>
+        <a href="/projects" class="btn btn-outline-light btn-lg">View Projects <i class="bi bi-folder2-open"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <%# Section: Highlights - three quick feature cards %>
+  <section class="container py-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card highlight-card h-100 text-center">
+          <div class="card-body">
+            <i class="bi bi-code-slash highlight-icon"></i>
+            <h3 class="h5 mt-3">Clean Code</h3>
+            <p class="mb-0">Readable, maintainable and well-documented code for every project.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card highlight-card h-100 text-center">
+          <div class="card-body">
+            <i class="bi bi-lightning-charge highlight-icon"></i>
+            <h3 class="h5 mt-3">Fast Delivery</h3>
+            <p class="mb-0">Efficient development workflow from idea to deployed product.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card highlight-card h-100 text-center">
+          <div class="card-body">
+            <i class="bi bi-people highlight-icon"></i>
+            <h3 class="h5 mt-3">User First</h3>
+            <p class="mb-0">Interfaces designed around real user needs and feedback.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<%- include('partials/footer'); %>

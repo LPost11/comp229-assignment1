@@ -1,0 +1,206 @@
+/*
+ * File Name: style.css
+ * Student's Name: WangZhenghao
+ * StudentID: 2024110451
+ * Date: 2026-11-05
+ *
+ * Description:
+ * Custom stylesheet for the LPoster personal portfolio site.
+ * Extends Bootstrap 5 with the site's brand colours and layout.
+ */
+
+/* ==================== Design Tokens ==================== */
+:root {
+  --lp-primary: #6c5ce7;      /* brand purple */
+  --lp-primary-dark: #5a4bd1; /* hover state */
+  --lp-accent: #00d2a8;       /* accent teal */
+  --lp-dark: #1f2430;         /* navbar / footer background */
+  --lp-light: #f7f8fc;        /* page background */
+}
+
+/* ==================== Base Layout ==================== */
+body {
+  background-color: var(--lp-light);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Main content area stretches so the footer stays at the bottom */
+.site-main {
+  flex: 1;
+}
+
+.text-accent {
+  color: var(--lp-accent);
+}
+
+/* ==================== Navigation Bar ==================== */
+.site-navbar {
+  background-color: var(--lp-dark);
+}
+
+/* Custom logo image inside the navbar */
+.site-logo {
+  border-radius: 8px;
+}
+
+/* Brand wordmark: "L" white, "Poster" in accent colour */
+.brand-text {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: #ffffff;
+}
+
+.brand-accent {
+  color: var(--lp-accent);
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  margin-left: 0.5rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--lp-accent);
+}
+
+/* ==================== Buttons ==================== */
+.btn-accent {
+  background-color: var(--lp-accent);
+  color: #10201c;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: #00b894;
+  color: #10201c;
+}
+
+/* ==================== Home Page ==================== */
+.hero {
+  background: linear-gradient(135deg, var(--lp-dark) 0%, var(--lp-primary-dark) 100%);
+}
+
+.hero-subtitle {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Highlighted mission statement box */
+.mission-statement {
+  max-width: 720px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #eef0f6;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+}
+
+.highlight-card {
+  border: none;
+  border-top: 4px solid var(--lp-accent);
+  transition: transform 0.2s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+}
+
+.highlight-icon {
+  font-size: 2.2rem;
+  color: var(--lp-primary);
+}
+
+/* ==================== Inner Page Title Banner ==================== */
+.page-title {
+  background: linear-gradient(135deg, var(--lp-primary-dark) 0%, var(--lp-primary) 100%);
+}
+
+/* ==================== About Page ==================== */
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+}
+
+.edu-list li {
+  padding: 0.25rem 0;
+}
+
+/* ==================== Projects Page ==================== */
+.project-card {
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 1.5rem rgba(31, 36, 48, 0.15) !important;
+}
+
+.project-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.tech-badge {
+  background-color: var(--lp-primary);
+  margin-right: 0.35rem;
+}
+
+/* ==================== Services Page ==================== */
+.service-card {
+  border: none;
+}
+
+.service-icon {
+  font-size: 2.4rem;
+  color: var(--lp-primary);
+}
+
+.service-card:hover .service-icon {
+  color: var(--lp-accent);
+}
+
+/* Call-to-action strip at the bottom of the Services page */
+.cta-strip {
+  background: linear-gradient(135deg, var(--lp-primary) 0%, var(--lp-primary-dark) 100%);
+}
+
+/* ==================== Contact Page ==================== */
+.contact-panel {
+  background: linear-gradient(160deg, var(--lp-dark) 0%, var(--lp-primary-dark) 100%);
+  border: none;
+}
+
+.contact-list li {
+  font-size: 1rem;
+}
+
+/* ==================== Footer ==================== */
+.site-footer {
+  background-color: var(--lp-dark);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.footer-link:hover {
+  color: var(--lp-accent);
+}

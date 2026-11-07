@@ -1,0 +1,32 @@
+<%# File Name: footer.ejs %>
+<%# Student's Name: WangZhenghao %>
+<%# StudentID: 2024110451 %>
+<%# Date: 2026-11-05 %>
+<%# Description: %>
+<%# Partial view - site footer. Included at the bottom of %>
+<%# every page template. Loads Bootstrap JS bundle and the %>
+<%# site-wide client scripts. %>
+  </main>
+
+  <%# Section: Site Footer - copyright and quick links %>
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 py-4">
+      <p class="mb-0 footer-text">&copy; 2026 LPoster &mdash; WangZhenghao (2024110451). All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/about" class="footer-link">About</a>
+        <a href="/contact" class="footer-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <%# Section: Scripts - Bootstrap bundle then custom site JavaScript %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/javascripts/site.js"></script>
+  <%# Contact form validation script, loaded only on the Contact page %>
+  <% if (typeof page !== 'undefined' && page === 'contact') { %>
+  <script src="/javascripts/contact.js"></script>
+  <% } %>
+</body>
+
+</html>

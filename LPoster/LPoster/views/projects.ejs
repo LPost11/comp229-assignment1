@@ -1,0 +1,81 @@
+<%# File Name: projects.ejs %>
+<%# Student's Name: WangZhenghao %>
+<%# StudentID: 2024110451 %>
+<%# Date: 2026-11-05 %>
+<%# Description: %>
+<%# View template - Projects Page. Highlights at least 3 projects %>
+<%# with images, descriptions and technology tags. %>
+<%- include('partials/header', { title: title, page: page }); %>
+
+  <%# Section: Page Title %>
+  <section class="page-title text-center text-white">
+    <div class="container py-5">
+      <h1 class="fw-bold">Projects</h1>
+      <p class="mb-0">Things I have designed, built and shipped</p>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row g-4">
+
+      <%# Project 1: Task Manager %>
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="/images/project1.svg" class="card-img-top project-img" alt="TaskFlow web app screenshot">
+          <div class="card-body">
+            <h2 class="h5 card-title">TaskFlow</h2>
+            <p class="card-text">
+              A task management web app with drag-and-drop boards, deadline reminders
+              and team collaboration. Built with Express and MongoDB.
+            </p>
+            <div class="tech-tags">
+              <span class="badge tech-badge">Node.js</span>
+              <span class="badge tech-badge">Express</span>
+              <span class="badge tech-badge">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%# Project 2: Campus Events %>
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="/images/project2.svg" class="card-img-top project-img" alt="Campus events mobile app screenshot">
+          <div class="card-body">
+            <h2 class="h5 card-title">Campus Events</h2>
+            <p class="card-text">
+              A mobile-friendly site that aggregates campus club events, with RSVP,
+              QR check-in and a live schedule powered by an EJS templated front end.
+            </p>
+            <div class="tech-tags">
+              <span class="badge tech-badge">EJS</span>
+              <span class="badge tech-badge">Bootstrap</span>
+              <span class="badge tech-badge">REST API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%# Project 3: Weather Dashboard %>
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="/images/project3.svg" class="card-img-top project-img" alt="Weather dashboard screenshot">
+          <div class="card-body">
+            <h2 class="h5 card-title">Weather Dashboard</h2>
+            <p class="card-text">
+              A responsive dashboard that visualises weather forecasts with charts,
+              location search and saved favourites, calling a public weather API.
+            </p>
+            <div class="tech-tags">
+              <span class="badge tech-badge">JavaScript</span>
+              <span class="badge tech-badge">Chart.js</span>
+              <span class="badge tech-badge">OpenWeather API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<%- include('partials/footer'); %>

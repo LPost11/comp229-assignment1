@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <!-- Placeholder image for Project 1: TaskFlow -->
+  <rect width="600" height="360" fill="#5a4bd1"/>
+  <rect x="60" y="50" width="220" height="260" rx="10" fill="#ffffff" opacity="0.92"/>
+  <rect x="310" y="50" width="230" height="120" rx="10" fill="#ffffff" opacity="0.75"/>
+  <rect x="310" y="190" width="230" height="120" rx="10" fill="#00d2a8" opacity="0.85"/>
+  <text x="300" y="340" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold"
+    fill="#ffffff" text-anchor="middle">TaskFlow - Task Management App</text>
+</svg>

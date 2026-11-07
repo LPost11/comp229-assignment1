@@ -1,0 +1,56 @@
+<%# File Name: header.ejs %>
+<%# Student's Name: WangZhenghao %>
+<%# StudentID: 2024110451 %>
+<%# Date: 2026-11-05 %>
+<%# Description: %>
+<%# Partial view - document head and top navigation bar. %>
+<%# Included at the top of every page template. %>
+<%# Receives locals: title (page <title>), page (active page id). %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%# Section: Page Head - meta tags, Bootstrap CDN and custom stylesheet %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+
+  <%# Bootstrap CSS framework (strongly recommended by the assignment) %>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <%# Bootstrap Icons for the Services page and contact panel %>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <%# Custom stylesheet for the LPoster site %>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <%# Section: Navigation Bar with custom LPoster logo %>
+  <nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
+    <div class="container">
+      <%# Custom Logo: LPoster mark + wordmark, links back to Home %>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <img src="/images/logo.svg" alt="LPoster Logo" width="40" height="40" class="site-logo">
+        <span class="brand-text">L<span class="brand-accent">Poster</span></span>
+      </a>
+
+      <%# Mobile hamburger toggle %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <%# Main navigation - one link per page of the site %>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link <%= page === 'home' ? 'active' : '' %>" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link <%= page === 'about' ? 'active' : '' %>" href="/about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link <%= page === 'projects' ? 'active' : '' %>" href="/projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link <%= page === 'services' ? 'active' : '' %>" href="/services">Services</a></li>
+          <li class="nav-item"><a class="nav-link <%= page === 'contact' ? 'active' : '' %>" href="/contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <%# Section: Page Content Start - each template fills this container %>
+  <main class="site-main">
